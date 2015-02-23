@@ -31,6 +31,7 @@
             .col-md-2
               %nav.main
                 %ul
+                  %li= link_to 'Take Survey', mine_submissions_url
                   %li= link_to 'Me', [:results, scope: :me]
 
                   - if user_signed_in?
