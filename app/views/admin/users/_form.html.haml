@@ -1,0 +1,35 @@
+= form_for [:admin, @user] do |f|
+  .form-group
+    = f.label :name
+    = f.text_field :name
+
+  .form-group
+    = f.label :email
+    = f.text_field :email
+
+  .checkbox
+    = f.label :active do
+      = f.check_box :active
+      Active
+
+  .checkbox
+    = f.label :admin do
+      = f.check_box :admin
+      Admin
+
+  .form-group
+    = f.label :manager
+    = f.select :manager_user_id, User.all.order(:email).collect { |u| [u.email, u.id] }, {include_blank: '(none)'}, {class: 'form-control'}
+
+  .form-group
+    = f.label :tags_as_string, 'Tags'
+    = f.text_field :tags_as_string, class: 'form-control'
+
+  .form-group
+    = f.label :reports
+    /%input.statebox{type: 'checkbox'}
+    .collection
+      = f.collection_check_boxes :report_ids, User.order(:email).all, :id, :abbreviated_name do |b|
+        .checkbox= b.label { b.check_box + b.text }
+
+  .submit= f.submit class: 'btn btn-primary'

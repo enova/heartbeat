@@ -71,5 +71,7 @@
           .row
             .col-md-10.col-md-offset-2
               %p
-                %span= link_to 'Heartbeat on Github', 'https://github.com/isaacbowen/heartbeat', target: :_blank
-                %span #{icon 'heart'} Isaac
+                %span= link_to 'Heartbeat on Github', 'https://github.com/enova/heartbeat', target: :_blank
+                %span
+                  #{icon 'heart'}
+                  = link_to "Isaac".html_safe, 'http://isaacbowen.com/', target: :_blank
