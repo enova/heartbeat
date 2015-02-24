@@ -27,6 +27,8 @@ gem 'descriptive_statistics', require: false
 
 gem 'newrelic_rpm'
 
+gem 'puma', '~> 2.11'
+
 group :development do
   gem 'annotate'
   
