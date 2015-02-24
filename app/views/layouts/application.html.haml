@@ -32,7 +32,7 @@
               %nav.main
                 %ul
                   %li= link_to 'Take Survey', mine_submissions_url
-                  %li= link_to 'Me', [:results, scope: :me]
+                  %li= link_to 'My Results', [:results, scope: :me]
 
                   - if user_signed_in?
 
@@ -43,7 +43,7 @@
                     - if current_user.managers.any?
                       %li= link_to 'My managers', [:results, scope: :managers]
 
-                  %li= link_to 'Enova', :results
+                  %li= link_to 'Enova Results', :results
 
                 - if user_signed_in? and current_user.tags.any?
                   %ul

@@ -4,13 +4,13 @@ class SubmissionsController < ApplicationController
   before_action :authenticate_user!, only: :mine
 
   def mine
+    if !current_submission || current_submission.completed?
+      current_user.submissions.create!
+    end
+
     submission = current_user.submissions.order('created_at desc').first
 
-    if submission
-      redirect_to submission
-    else
-      redirect_to :login
-    end
+    redirect_to submission
   end
 
   def show
