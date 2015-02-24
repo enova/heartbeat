@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(version: 20140723161152) do
   add_index "users", ["manager_user_id"], name: "index_users_on_manager_user_id", using: :btree
   add_index "users", ["tags"], name: "index_users_on_tags", using: :gin
 
+  Foreigner.load
   add_foreign_key "submission_metrics", "metrics", name: "submission_metrics_metric_id_fk"
   add_foreign_key "submission_metrics", "submissions", name: "submission_metrics_submission_id_fk"
 
