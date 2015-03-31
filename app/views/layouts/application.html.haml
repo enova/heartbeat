@@ -31,7 +31,8 @@
             .col-md-2
               %nav.main
                 %ul
-                  %li= link_to 'Me', [:results, scope: :me]
+                  %li= link_to 'Take Survey', mine_submissions_url
+                  %li= link_to 'My Results', [:results, scope: :me]
 
                   - if user_signed_in?
 
@@ -42,7 +43,7 @@
                     - if current_user.managers.any?
                       %li= link_to 'My managers', [:results, scope: :managers]
 
-                  %li= link_to 'Enova', :results
+                  %li= link_to 'Enova Results', :results
 
                 - if user_signed_in? and current_user.tags.any?
                   %ul
@@ -71,5 +72,7 @@
           .row
             .col-md-10.col-md-offset-2
               %p
-                %span= link_to 'Heartbeat on Github', 'https://github.com/isaacbowen/heartbeat', target: :_blank
-                %span #{icon 'heart'} Isaac
+                %span= link_to 'Heartbeat on Github', 'https://github.com/enova/heartbeat', target: :_blank
+                %span
+                  #{icon 'heart'}
+                  = link_to "Isaac".html_safe, 'http://isaacbowen.com/', target: :_blank

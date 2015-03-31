@@ -7,13 +7,12 @@
         = icon 'arrow-right'
         %strong Results for this week
 
-    %p.muted This thing is a work in progress. Hit up #{link_to '#heartbeat', 'https://enova.slack.com/messages/heartbeat/', target: :_blank} on Slack to join up, talk about what this is and what it could be. (Pull requests welcome!)
+    %p.muted This thing is a work in progress. Hit up #{link_to '#heartbeat', 'https://enova.slack.com/messages/heartbeat/', target: :_blank} on Slack to join up, talk about what this is and what it could be. #{link_to '(Pull requests welcome!)', 'https://github.com/enova/heartbeat', target: :_blank}
 
     - if current_submission.closed?
       %p (Your submission is closed. Stay tuned for more.)
     - else
       %p.submission-toggle
-        Forget something?
-        = link_to [:edit, current_submission] do
-          Update your submission
-          = icon 'angle-right'
+        Want to do another one?
+        = link_to  mine_submissions_url do
+          Take another Survey!

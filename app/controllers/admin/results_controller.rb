@@ -1,5 +1,14 @@
 class Admin::ResultsController < Admin::BaseController
 
+  def new
+  end
+
+  def create
+    User.active.each { |u| u.submissions.create! }
+
+    redirect_to admin_results_url
+  end
+
   def index
     result = Result.new source: Submission.all
     @results = [result]

@@ -1,5 +1,19 @@
 class Admin::UsersController < Admin::BaseController
 
+  def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.new(user_params)
+
+    if @user.save
+      redirect_to edit_admin_user_url(@user)
+    else
+      redirect_to :back
+    end
+  end
+
   def index
     @users = User.order('active desc, email asc')
   end
@@ -47,7 +61,7 @@ class Admin::UsersController < Admin::BaseController
   protected
 
   def user_params
-    params.require(:user).permit(:name, :manager_user_id, :tags_as_string, :active, :admin, report_ids: [])
+    params.require(:user).permit(:name, :email, :manager_user_id, :tags_as_string, :active, :admin, report_ids: [])
   end
 
 end
