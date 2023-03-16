@@ -1,18 +1,18 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
 
-gem 'rails', '4.1.1'
+gem 'rails', '6.1.7.3'
 gem 'pg'
 gem 'foreigner'
 gem 'dalli'
 
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 5.0.8'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'jquery-rails'
+gem 'coffee-rails', '~> 4.2.2'
+gem 'jquery-rails', '>= 4.0.1'
 
 gem 'haml'
 gem 'stamp'
@@ -20,7 +20,7 @@ gem 'numbers_and_words'
 gem 'liquid'
 
 # auth
-gem 'devise'
+gem 'devise', '>= 4.7.0'
 gem 'omniauth-google-oauth2'
 
 # if auto-required, this will monkeypatch the crap out of Enumerable
