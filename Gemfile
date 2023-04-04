@@ -1,26 +1,26 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
 
-gem 'rails', '4.1.1'
+gem 'rails', '6.1.7.3'
 gem 'pg'
 gem 'foreigner'
-gem 'dalli'
+gem 'dalli', '>= 3.2.3'
 
-gem 'sass-rails', '~> 4.0.3'
-gem 'bootstrap-sass'
+gem 'sass-rails', '~> 6.0.0'
+gem 'bootstrap-sass', '>= 3.4.0'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'jquery-rails'
+gem 'uglifier', '>= 2.7.2'
+gem 'coffee-rails', '~> 4.2.2'
+gem 'jquery-rails', '>= 4.4.0'
 
-gem 'haml'
+gem 'haml', '>= 5.0.0'
 gem 'stamp'
 gem 'numbers_and_words'
 gem 'liquid'
 
 # auth
-gem 'devise'
+gem 'devise', '>= 4.7.1'
 gem 'omniauth-google-oauth2'
 
 # if auto-required, this will monkeypatch the crap out of Enumerable
@@ -34,7 +34,7 @@ group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
 
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.8.0'
   gem 'binding_of_caller'
 
   gem 'guard'
