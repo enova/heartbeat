@@ -1,18 +1,18 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
 
-gem 'rails', '4.1.1'
+gem 'rails', '7.0.8.1'
 gem 'pg'
 gem 'foreigner'
 gem 'dalli'
 
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 5.0.8'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'jquery-rails'
+gem 'coffee-rails', '~> 4.2.2'
+gem 'jquery-rails', '>= 4.0.1'
 
 gem 'haml'
 gem 'stamp'
@@ -20,8 +20,8 @@ gem 'numbers_and_words'
 gem 'liquid'
 
 # auth
-gem 'devise'
-gem 'omniauth-google-oauth2'
+gem 'devise', '>= 4.7.0'
+gem 'omniauth-google-oauth2', '>= 0.2.6'
 
 # if auto-required, this will monkeypatch the crap out of Enumerable
 gem 'descriptive_statistics', require: false
@@ -43,17 +43,17 @@ end
 
 group :development, :test do
   gem 'dotenv-rails'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 2.99.0'
   gem 'shoulda'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '>= 4.5.0'
   gem 'faker'
   gem 'pry-rails'
-  gem 'capybara'
-  gem 'poltergeist'
+  gem 'capybara', '>= 2.3.0'
+  gem 'poltergeist', '>= 1.5.1'
   gem 'database_cleaner'
   gem 'timecop'
   gem 'codeclimate-test-reporter', require: nil
-  gem 'quiet_assets'
+  gem 'quiet_assets', '>= 1.1.0'
 
   # http://collectiveidea.com/blog/archives/2014/02/11/false-positives-on-travis-ci-with-codeclimate-simplecov/
   gem 'simplecov', '~> 0.7.1', require: nil
