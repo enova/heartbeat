@@ -48,8 +48,8 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'pry-rails'
-  gem 'capybara'
-  gem 'poltergeist'
+  gem 'capybara', '>= 2.3.0'
+  gem 'poltergeist', '>= 1.5.1'
   gem 'database_cleaner'
   gem 'timecop'
   gem 'codeclimate-test-reporter', require: nil
