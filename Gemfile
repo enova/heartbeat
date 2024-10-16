@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
 
-gem 'rails', '4.1.1'
+gem 'rails', '7.0.0'
 gem 'pg'
 gem 'foreigner'
 gem 'dalli'
 
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 6.0.0'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
